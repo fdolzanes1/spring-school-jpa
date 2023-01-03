@@ -49,4 +49,28 @@ public class StudentRepositoryTest {
 		List<Student> student = repository.findAll();
 		System.out.println(student);
 	}
+	
+	@Test
+	public void printStudentByFirstName() {
+		List<Student> students = repository.findByFirstName("Fabiano");
+		System.out.println("Students == "+students);
+	}
+	
+	@Test
+	public void printStudentByFirstNameContaining() {
+		List<Student> students = repository.findByFirstName("Fab");
+		System.out.println("Students == "+students);
+	}
+	
+	@Test
+	public void printStudentBasedOnGuardianName() {
+		List<Student> students = repository.findByGuardianName("Nikhil");
+		System.out.println("Students == "+students);
+	}
+	
+	@Test
+	public void printStudentByFirstNameAndLastName() {
+		Student student = repository.findByFirstNameAndLastName("Fabiano", "Dolzanes");
+		System.out.println("Student == "+student);
+	}
 }
