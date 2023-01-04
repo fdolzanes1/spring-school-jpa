@@ -73,4 +73,16 @@ public class StudentRepositoryTest {
 		Student student = repository.findByFirstNameAndLastName("Fabiano", "Dolzanes");
 		System.out.println("Student == "+student);
 	}
+	
+	@Test
+	public void printgetStudentByEmailAddress() {
+		Student student = repository.getStudentByEmailAddress("fabiano@mail.com");
+		System.out.println("Student Email Address== "+student);
+	}
+
+	@Test
+	public void printgetStudentAll() {
+		List<Student> student = repository.getStudentAll();
+		System.out.println("Student All == "+student);
+	}
 }
