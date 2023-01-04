@@ -85,4 +85,11 @@ public class StudentRepositoryTest {
 		List<Student> student = repository.getStudentAll();
 		System.out.println("Student All == "+student);
 	}
+	
+	@Test
+    public void updateStudentNameByEmailIdTest() {
+		repository.updateStudentNameByEmailId(
+                "FABIANO MEIRELLIS",
+                "fabiano@mail.com");
+    }
 }
